@@ -9,7 +9,7 @@ var host = "localhost";
 
 http.createServer(function (req, res) {
 
-  var stat = fs.statSync(path)
+  var stat = fs.statSync(path);
   var total = stat.size;
 
   if (req.headers.range) {   // meaning client (browser) has moved the forward/back slider
