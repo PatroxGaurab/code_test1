@@ -2,14 +2,14 @@ var http = require('http'),
     fs = require('fs'),
     util = require('util');
 
-var path = "/home/gaurab/Downloads/lec/";
+var path = "/home/gaurab/Downloads/lec/Harvard i-lab _ How to be a Founder Worth Coding For with Dan Sullivan and Galen Sanford.mp4";
 
 var port = 8888;
 var host = "localhost";
 
 http.createServer(function (req, res) {
 
-  var stat = fs.statSync(path);
+  var stat = fs.statSync(path)
   var total = stat.size;
 
   if (req.headers.range) {   // meaning client (browser) has moved the forward/back slider
